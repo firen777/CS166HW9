@@ -2,15 +2,19 @@ package decorator;
 
 public class f
 {
-  h a;
+  Evaluator h;
   
-  f(h paramH)
+  f(Evaluator paramH)
   {
-    a = paramH;
+    h = paramH;
   }
   
-  public boolean a(Applicant paramD)
+  /**Check if paramD is accepted base of Student type (?)
+ * @param paramD Student
+ * @return
+ */
+public boolean boolF(Student paramD)
   {
-    return a.a(paramD);
+    return h.evaluate(paramD);
   }
 }

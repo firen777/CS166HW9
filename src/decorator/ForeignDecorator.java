@@ -2,22 +2,34 @@ package decorator;
 
 import java.io.PrintStream;
 
-public class i
-  extends a
+/**
+ * TOEFL score >= 100
+ *
+ */
+public class ForeignDecorator
+  extends EvalDecorator
 {
-  public i(h paramH)
+  /**TOEFL score >= 100
+ * @param paramH previous minimal requirement
+ */
+public ForeignDecorator(Evaluator paramH)
   {
     super(paramH);
   }
   
-  public boolean a(Applicant paramD)
+  /**Foreign Student need to have TOEFL score >= 100
+   * @param paramD Student
+   * @return
+   */
+@Override
+  public boolean evaluate(Student paramD)
   {
     boolean bool = false;
     System.out.println("Inside ForeignStudent Decorator");
     if (paramD.getTOEFL() >= 100)
     {
       System.out.println("TOEFL score " + paramD.getTOEFL() + " is greater/equal than reqd. min. score of 100.");
-      bool = a.a(paramD);
+      bool = previousEval.evaluate(paramD);
     }
     else
     {

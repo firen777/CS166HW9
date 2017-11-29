@@ -2,22 +2,33 @@ package decorator;
 
 import java.io.PrintStream;
 
-public class c
-  extends a
+/**
+ * MCAT>=30
+ *
+ */
+public class MCATDecorator
+  extends EvalDecorator
 {
-  public c(h paramH)
+  /**MCAT>=30
+ * @param paramH previous req.
+ */
+public MCATDecorator(Evaluator paramH)
   {
     super(paramH);
   }
   
-  public boolean a(Applicant paramD)
+/**Medical Student need MCAT >= 30
+ * @param paramD Student
+ * @return
+ */
+public boolean evaluate(Student paramD)
   {
     boolean bool = false;
     System.out.println("Inside Medical Decorator");
     if (paramD.getMCAT() >= 30)
     {
       System.out.println("MCAT score " + paramD.getMCAT() + " is greater/equal than reqd. min. score of 30.");
-      bool = a.a(paramD);
+      bool = previousEval.evaluate(paramD);
     }
     else
     {

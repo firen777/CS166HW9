@@ -2,16 +2,24 @@ package decorator;
 
 import java.io.PrintStream;
 
-/**
+/**GPA >=3.5
  * 
  *
  */
-public class b
-  implements h
+public class GPAEvaluator
+  implements Evaluator
 {
-  public b() {}
+  /**GPA >=3.5
+ * 
+ */
+public GPAEvaluator() {}
   
-  public boolean a(Applicant paramD)
+  /**Check if GPA >=3.5
+   * @param paramD Student
+   * @return
+   */
+@Override
+  public boolean evaluate(Student paramD)
   {
     System.out.println("Inside Concrete Class of GPAEvaluator ");
     boolean bool = false;

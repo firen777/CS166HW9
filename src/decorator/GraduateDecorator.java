@@ -2,22 +2,35 @@ package decorator;
 
 import java.io.PrintStream;
 
-public class e
-  extends a
+/**
+ * GRE >=1200
+ *
+ */
+public class GraduateDecorator
+  extends EvalDecorator
 {
-  public e(h paramH)
+  /**GRE >=1200
+ * @param paramH previous req
+ */
+public GraduateDecorator(Evaluator paramH)
   {
     super(paramH);
   }
-  
-  public boolean a(Applicant paramD)
+
+/**
+ * Graduate Student require GRE>=1200
+ * @param paramD Student
+ * @return
+ */
+@Override  
+public boolean evaluate(Student paramD)
   {
     boolean bool = false;
     System.out.println("Inside Graduate Decorator ");
     if (paramD.getGRE() >= 1200)
     {
       System.out.println("GRE score " + paramD.getGRE() + " is greater/equal than reqd. min. score of 1200.");
-      bool = a.a(paramD);
+      bool = previousEval.evaluate(paramD);
     }
     else
     {

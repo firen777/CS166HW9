@@ -4,7 +4,7 @@ package decorator;
  * Applicant Class
  *
  */
-public class Applicant
+public class Student
 {
   private String name;
   private String city;
@@ -30,7 +30,7 @@ public class Applicant
  * @param paramBoolean (?)
  * @param paramDouble2 (?)
  */
-public Applicant(String inName, String inCity, int paramInt1, double inGPA, int inGRE, int inTOEFL, int inMCAT, int inLSAT, boolean paramBoolean, double paramDouble2)
+public Student(String inName, String inCity, int paramInt1, double inGPA, int inGRE, int inTOEFL, int inMCAT, int inLSAT, boolean paramBoolean, double paramDouble2)
   {
     name = inName;
     city = inCity;
