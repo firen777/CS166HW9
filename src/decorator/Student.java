@@ -14,9 +14,9 @@ public class Student
   private int toefl;
   private int mcat;
   private int lsat;
-  private boolean i;
-  private double j;
-  private boolean k;
+  private boolean asdfBool;
+  private double asdfDouble;
+  private boolean xkcdBool;
   
   /** Constructor
  * @param inName Name
@@ -40,8 +40,8 @@ public Student(String inName, String inCity, int paramInt1, double inGPA, int in
     toefl = inTOEFL;
     mcat = inMCAT;
     lsat = inLSAT;
-    i = paramBoolean;
-    j = paramDouble2;
+    asdfBool = paramBoolean;
+    asdfDouble = paramDouble2;
   }
   
   public String getName()
@@ -74,18 +74,18 @@ public Student(String inName, String inCity, int paramInt1, double inGPA, int in
     return gpa;
   }
   
-  public void setK(boolean paramBoolean)
+  public void setXKCD(boolean paramBoolean)
   {
-    k = paramBoolean;
+    xkcdBool = paramBoolean;
   }
   
-  public boolean getK()
+  public boolean getXKCD()
   {
-    return k;
+    return xkcdBool;
   }
   
-  public boolean getNotI()
+  public boolean getNotASDFBool()
   {
-    return !i;
+    return !asdfBool;
   }
 }
