@@ -6,7 +6,7 @@ public class Test
 {
   public Test() {}
   
-  public static void main(String[] paramArrayOfString)
+  public static void main2(String[] paramArrayOfString)
   {
     System.out.println("\n\nCreating new Application of Kamlesh with GPA 3.5, GRE 1250, TOEFL 105, LSAT 165. He's a foreign student.");
     Student localD = new Student("Kamlesh", "Fremont", 124, 3.5D, 1250, 105, 0, 165, false, 20000.0D);
